@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}Flasky - Confirm your account{% endblock %}
+{% block title %}WeMovies - 账号激活{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
     <h1>
-        Hello, {{ current_user.username }}!
+        在吗？ {{ current_user.username }}!
     </h1>
-    <h3>You have not confirmed your account yet.</h3>
+    <h3>您的账号好像还没激活？</h3>
     <p>
-        Before you can access this site you need to confirm your account.
-        Check your inbox, you should have received an email with a confirmation link.
+        请您务必先激活您的账号。
+        打开您的邮箱，会发现我们发送了一封邮件用以激活您的账号。
     </p>
     <p>
-        Need another confirmation email?
-        <a href="{{ url_for('auth.resend_confirmation') }}">Click here</a>
+        好像没有收到邮件？
+        <a href="{{ url_for('auth.resend_confirmation') }}">点击这里重新发送</a>
     </p>
 </div>
 {% endblock %}

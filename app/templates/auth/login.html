@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
-{% block title %}Flasky - Login{% endblock %}
+{% block title %}WeMovies - 登陆{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
-    <h1>Login</h1>
+    <h1>登陆</h1>
 </div>
 <div class="col-md-4">
     {{ wtf.quick_form(form) }}
     <br>
-    <p>Forgot your password? <a href="{{ url_for('auth.password_reset_request') }}">Click here to reset it</a>.</p>
-    <p>New user? <a href="{{ url_for('auth.register') }}">Click here to register</a>.</p>
+    <p>我好像把密码给忘了。 <a href="{{ url_for('auth.password_reset_request') }}">您的密码由在下来守护！</a>.</p>
+    <p>我好像连账号都没有。<a href="{{ url_for('auth.register') }}"> 屠龙宝刀， 点击就送。</a>.</p>
 </div>
 {% endblock %}
